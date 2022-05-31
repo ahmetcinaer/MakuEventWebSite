@@ -1,0 +1,16 @@
+
+php_value mbstring.http_input auto
+php_value date.timezone Pacific/Truk
+# HTID:18998530: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:18998530:
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+DirectoryIndex index.php index.html index.htm index2.html
+
+
+ErrorDocument 403 https://www.makuevent.ml/index.php?sayfa=404
+ErrorDocument 404  https://www.makuevent.ml/index.php?sayfa=404
+ErrorDocument 500  https://www.makuevent.ml/index.php?sayfa=404
+Options -indexes
